@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Nadeem Todo</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div>
+        <center>
+            <h1 id="id1">Todo List Using JavaScript</h1>
+        </center>
+    </div>
+    <center>
+        <div id="second_block">
+            <input id="input" type="text" placeholder="Add Todo">
+            <button id="add_button" onclick="addTodo()">Add</button>
+            <div id="insideDiv">
+
+            </div>
+        </div>
+    </center>
+    <script>
+ 
+        let currentIndex = 1;
+        function addTodo() {
+            const inp = document.querySelector("input")
+            const value1 = inp.value
+            const divEle = document.createElement("div")
+            divEle.setAttribute("id", "todo-" + currentIndex)
+            //classList
+            divEle.classList.add("todo-item");
+            //
+            const h4 = document.createElement("h4")
+            const button1 = document.createElement("button")
+            button1.setAttribute("onclick", "deleteTodo(" + currentIndex + ")")
+            button1.classList.add("todo-button")
+            h4.innerHTML = value1
+            button1.textContent = 'Delete';
+            divEle.appendChild(h4)
+            divEle.appendChild(button1)
+            document.getElementById("insideDiv").appendChild(divEle)
+            currentIndex = currentIndex + 1
+            inp.value = ""
+        }
+
+        function deleteTodo(index) {
+            const child = document.getElementById("todo-" + index)
+            const parent = document.getElementById("insideDiv")
+            parent.removeChild(child)
+        }    
+
+    </script>
+</body>
+
+</html>

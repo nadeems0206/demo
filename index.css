@@ -1,0 +1,45 @@
+body{
+    /* background-color: blue; */
+    background-color: #0066cc;
+}
+
+#id1{
+    background-color: white;
+    /* color:blue ; */
+    color: #0066cc;
+    width: 500px;
+    margin-top: 50px;
+    
+}
+
+#second_block{
+background-color: white;
+width: 500px;
+}
+
+#input{
+    width: 300px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    border-color: #0066cc;
+   
+}
+
+#add_button{
+    background-color: #0066cc;
+    width: 100px;
+    color: white;
+}
+
+.todo-item{
+    background-color: lightblue;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.todo-button{
+    background-color: #0066cc;
+}
